@@ -8,7 +8,7 @@
 
 - [NodeJS](/zh-cn/js/NodeJS.md)
 
-- [vuejs使用](/zh-cn/vuejs.md)
+- [vuejs使用](/zh-cn/js/vuejs.md)
 
 ## 二级标题1
 
