@@ -15,18 +15,29 @@
       name: '',
       repo: '',
       loadSidebar: true,
+      auto2top: true,
+      formatUpdated: '{YYYY}-{MM}-{DD}',
+      plugins: [
+      function (hook, vm) {
+        hook.beforeEach(function (html) {
+          return html
+            + '<hr/>'
+            + '上次更新：{docsify-updated} '
+        })
+      }
+    ],
       subMaxLevel: 2,
       alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
       },
       search: 'auto', // 默认值
 
-      search : [
-        '/',            // => /README.md
-        '/guide',       // => /guide.md
-        '/get-started', // => /get-started.md
-        '/zh-cn/',      // => /zh-cn/README.md
-      ],
+      // search : [
+      //   '/',            // => /README.md
+      //   '/guide',       // => /guide.md
+      //   '/get-started', // => /get-started.md
+      //   '/zh-cn/',      // => /zh-cn/README.md
+      // ],
 
       // 完整配置参数
       search: {
@@ -53,11 +64,13 @@
       }
     }
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.js"></script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/docsify-copy-code"></script>
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 <!-- 代码高亮 默认支持 CSS、JavaScript 和 HTML-->
 <script src="//unpkg.com/docsify"></script>
 <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
