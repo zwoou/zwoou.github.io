@@ -12,7 +12,7 @@
   <div id="app">加载中</div>
   <script>
     window.$docsify = {
-      name: '',
+      name: 'note',
       repo: '',
       loadSidebar: true,
       formatUpdated: '{YYYY}-{MM}-{DD}',
@@ -24,12 +24,12 @@
             + '上次更新：{docsify-updated} '
         })
       }
-    ],
-      subMaxLevel: 2,
-      alias: {
-      '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      search: 'auto', // 默认值
+    ]
+      // subMaxLevel: 2,
+      // alias: {
+      // '/.*/_sidebar.md': '/_sidebar.md'
+      // },
+      // search: 'auto', // 默认值
 
       // search : [
       //   '/',            // => /README.md
@@ -39,28 +39,28 @@
       // ],
 
       // 完整配置参数
-      search: {
-        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: [], // or 'auto'
-        placeholder: 'Type to search',
+      // search: {
+      //   maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      //   paths: [], // or 'auto'
+      //   placeholder: 'Type to search',
 
-        // 支持本地化
-        placeholder: {
-          '/zh-cn/': '搜索',
-          '/': 'Type to search'
-        },
+      //   // 支持本地化
+      //   placeholder: {
+      //     '/zh-cn/': '搜索',
+      //     '/': 'Type to search'
+      //   },
 
-        noData: 'No Results!',
+      //   noData: 'No Results!',
 
-        // 支持本地化
-        noData: {
-          '/zh-cn/': '找不到结果',
-          '/': 'No Results'
-        },
+      //   // 支持本地化
+      //   noData: {
+      //     '/zh-cn/': '找不到结果',
+      //     '/': 'No Results'
+      //   },
 
-        // 搜索标题的最大程级, 1 - 6
-        depth: 5
-      }
+      //   // 搜索标题的最大程级, 1 - 6
+      //   depth: 5
+      // }
     }
   </script>
   
