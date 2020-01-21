@@ -13,7 +13,7 @@ tags:
 3. 相对线程安全
 4. 线程兼容
 5. 线程对立
-<!--more-->
+
 ## 线程安全的实现方法
 1. 互斥同步
     除了synchronized之外还有 java.util.concurrent包中的重入锁（ReentrantLock)来实现同步。
@@ -34,5 +34,5 @@ java.long.ThreadLocal类实现线程本地存储的功能。
 
 
 
-    
+​    
 
