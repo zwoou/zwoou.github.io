@@ -1,5 +1,4 @@
 
-
 # docker
 
 - [docker安装mysql8](/docker/docker安装mysql8.md)
@@ -14,12 +13,9 @@
 
 - [jvm-内存结构](/jvm/jvm-内存结构.md)
 
-- [jvm-垃圾回收](/ivm/jvm-垃圾回收.md	"jvm-垃圾回收")
-
+- [jvm-垃圾回收](/jvm/jvm-垃圾回收.md)
+- [jvm-java内存模型](/jvm/jvm-java内存模型.md)
   
-
-
-
 ### 三级标题1
 
 设置的 subMaxLevel: 2 ，故三级标题不显示
@@ -39,4 +35,3 @@
 ## 二级标题3
 
 显示
-
