@@ -20,9 +20,12 @@
 
 设置的 subMaxLevel: 2 ，故三级标题不显示
 
-# 一级标题2
+# 数据库
 
-显示
+- [mysql优化](/数据库/mysql优化.md)
+
+
+
 
 ## 二级标题2{docsify-ignore}
 
