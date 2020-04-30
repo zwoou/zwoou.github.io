@@ -1,11 +1,3 @@
----
-title: python
-date: 2019-05-11
-tags:
-    - python
-categories: 
-    - python
----
 
 # python使用
 
