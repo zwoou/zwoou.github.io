@@ -4,6 +4,12 @@
 
 ## 1. 内存结构
 
+
+
+![image-20201031222328584](https://gitee.com/zwoou/picgo/raw/master/pic/20201031222328.png)
+
+
+
 java程序执行过程图
 [![PYkIc4.png](https://s1.ax1x.com/2018/07/24/PYkIc4.png)](https://imgchr.com/i/PYkIc4)
 
@@ -45,7 +51,7 @@ Java虚拟机栈、本地方法栈、程序计数器是线程私有。
 
     与java虚拟机栈类似，区别是本地方法栈为native方法服务
     
-- Java堆
+- Java堆(Heap)
 
     创建的对象在堆中分配，大小可以通过-Xmx和-Xms来控制。
     Java堆是向高地址扩展的数据结构，是不连续的内存区域。
@@ -53,6 +59,8 @@ Java虚拟机栈、本地方法栈、程序计数器是线程私有。
     这块区域是垃圾收集器管理的主要区域（"GC 堆 "）。
     现在收集器基本都是采用分代收集算法，
     Java 堆还可以分成：新生代和老年代（新生代还可以分成 Eden 空间、From Survivor (幸存者)、To Survivor 空间等）。
+    
+    绝大部分对象在Eden区生成,当Eden区装填满的时候,会触发Young Gtarbage Collection ,即YGC
     
 - 方法区
     保存方法代码（编译后的java代码）和符号表.
