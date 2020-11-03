@@ -1,10 +1,3 @@
----
-title: vim
-date: 2019-05-17
-tags:
-    -vim
----
-
 # vim使用
 
 ## 设置行号
@@ -35,3 +28,7 @@ capslock切换大小写，也可以在小写状态下按shift+n
 命令行模式下，输入：nohlsearch
 
 也可以：set nohlsearch
+
+https://gitee.com/zwoou/picgo/raw/master/pic/vi-vim-cheat-sheet-sch.gif
+
+![](C:\Users\admin\Google 云端硬盘\zwoou.github.io\vim.assets\vi-vim-cheat-sheet-sch.gif)
