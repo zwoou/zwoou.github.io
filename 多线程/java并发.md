@@ -8,4 +8,4 @@
 - 竞争条件
 - 可见性
 - 不可变性
-- Java监视器模式（Java monitor pattern）
+- Java监视器模式（Java monitor pattern)  
