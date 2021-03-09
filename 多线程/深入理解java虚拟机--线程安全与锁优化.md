@@ -1,5 +1,29 @@
+# 线程安全
+
+[TOC]
+
+## 1. JVM内存模型
+
+- Shared Variables共享变量描述
+
+  可以在线程之间共享的内存称为共享内存或堆内存.
+
+  所有实例字段、静态字段和数组元素都存储在堆内存中。
+
+  如果至少有一个访问是写的,那么对同一个变量的两次访问(读或写)是冲突的.
+
+
+
+## 2. 指令重排序
+
+通过设置JVM的参数,打印出jit编译的内容(这里说的编译非class文件),通过可视化工具jitwatch进行查看,bin/server下放置动态链接库
+
+-server -XX:UnlockDiagnosticVMOptions -XX:PrintAssembly -XX:LogCompilation -XX:LogFile=jit.log
+
+关闭jit优化 -Djava.compiler=NONE
 
 ## 线程安全
+
 1. 不可变
 基本类型，定义时使用final关键字。
 引用类型。对象的行为对其状态不会产生任何影响。
@@ -84,8 +108,8 @@ JDK1.6默认开启
 
 
 
-    
-    
+
+​    
 
 
 

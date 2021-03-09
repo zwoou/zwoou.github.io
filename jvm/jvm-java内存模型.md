@@ -88,7 +88,7 @@ Java虚拟机内存模型中定义的内存访问操作与硬件的缓存访问�
 - volatile变量规则：对一个volatile域的写，happens-before于任意后续对这个volatile域的读。、
 - 传递性：如果A happens-before B ,且 B happens-before C 那么A happens-before C
 
-### 3. 重排序
+### 3. 指令重排序
 
 在执行程序时为了提高性能，编译器和处理器经常会对指令进行重排序。重排序分成三种类型：
 
