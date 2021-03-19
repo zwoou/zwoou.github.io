@@ -16,10 +16,3 @@
     -可重入代码（Reentrant Code），也叫做纯代码（Pure Code）
 4. 线程本地存储（Thread Local Storage)
 java.long.ThreadLocal类实现线程本地存储的功能。
-## 锁优化
-1. 自旋锁与自适应自旋
-    自旋次数默认值是10次，可通过-XX:PreBlockSpin来更改
-2. 锁清除
-3. 锁粗化
-4. 轻量级锁
-5. 偏向锁
