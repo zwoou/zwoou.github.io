@@ -22,24 +22,25 @@ java线程、工作内存、主内存之间的关系。
 ### 对于long和double型变量的特殊规则
 几乎各平台都选择把64位数据的读写操作作为原子操作来对待。   
 ### 原子性、可见性和有序性
+
     - 原子性（Atomicity）保证原子性变量操作包括read、load、assign,use,store和write,基本类型的访问读写是具有原子性的。
-    如果应用场景更大范围，字节码指令monitorenter和monitorexit来隐式使用这两个操作，java代码中就是 
-    synchronized关键字
+    如果应用场景更大范围，字节码指令monitorenter和monitorexit来隐式使用这两个操作，java代码中就是synchronized关键字
    - 可见性（Visibility）是指当一个线程修改了共享变量的值，其他线程都能立即得知这个修改。
 
     除了volatile之外，java中还有两个关键字可以实现可见性，即synchronized和final.
     - 有序性（Ordering）
-### 先行发生原则
+### 先行发生原则( Happen-Before规则)
+
 主要判断数据是否存在竞争，线程是否安全的依据
 天然的先行发生关系
     - 程序次序规则（Program Order Rule）：在一个线程内，控制流顺序。
-    - 管程锁定规则（Monitor Lock Rule）：一个unlock操作，先行发生于后面对同一个锁的lock操作。后面指时间上顺序。
-    - volatile变量规则（Volatile Variable Rule）： 对一个volatile变量写操作先行发生于后面对这个变量的读操作。
-    - 线程启动规则（Thread Start Rule）：Thread对象的是他start（）方法先行发生于此线程的每一个动作。
-    - 线程终止规则（Thread Termination Rule）：线程中的所有操作都先行发生于对此线程的终止检测，可以通过Thread.join()方法结束，Thread.isAlive()方法检测线程已经终止。
-    - 线程中断规则（Thread Interruption Rule）：对线程interrup()方法调用先行发生于被中断线程的代码检测到中断事件的发生。
-    - 对象终结规则（Finallzer Rule) : 一个对象的初始化完成（构造方法完成）先行发生于他的finalize()方法的开始。
-    - 传递性（Transitivity）：
+        - 管程锁定规则（Monitor Lock Rule）：一个unlock操作，先行发生于后面对同一个锁的lock操作。后面指时间上顺序。
+        - volatile变量规则（Volatile Variable Rule）： 对一个volatile变量写操作先行发生于后面对这个变量的读操作。
+        - 线程启动规则（Thread Start Rule）：Thread对象的是他start（）方法先行发生于此线程的每一个动作。
+        - 线程终止规则（Thread Termination Rule）：线程中的所有操作都先行发生于对此线程的终止检测，可以通过Thread.join()方法结束，Thread.isAlive()方法检测线程已经终止。
+        - 线程中断规则（Thread Interruption Rule）：对线程interrup()方法调用先行发生于被中断线程的代码检测到中断事件的发生。
+        - 对象终结规则（Finallzer Rule) : 一个对象的初始化完成（构造方法完成）先行发生于他的finalize()方法的开始。
+        - 传递性（Transitivity）：
 
 
 
