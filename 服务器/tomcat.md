@@ -1,12 +1,6 @@
----
-title: tomcat
-tags:
-    - tomcat
-    - 服务器
----
-
 # tomcat
 
+@TOC
 Tomcat内核设计剖析
 
 
@@ -75,3 +69,7 @@ netstat -ano | findstr 8080
 
 taskkill -pid 进程pid -f
 ```
+
+## 调优
+
+- [https://www.cnblogs.com/sunfenqing/p/7339058.html](https://www.cnblogs.com/sunfenqing/p/7339058.html)
