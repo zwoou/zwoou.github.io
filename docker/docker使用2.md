@@ -23,3 +23,16 @@
 ## 2. 端口映射
 
 -p 或-P
+
+
+
+## 3. privileged参数
+
+
+
+大约在0.6版，privileged被引入docker。
+使用该参数，container内的root拥有真正的root权限。
+否则，container内的root只是外部的一个普通用户权限。
+privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
+甚至允许你在docker容器中启动docker容器。
+
