@@ -1,10 +1,3 @@
----
-title: docker使用
-tags:
-
-   - docker
----
-
 # Docker Hello World
 
 Docker 允许你在容器内运行应用程序， 使用 **docker run** 命令来在容器内运行一个应用程序。
