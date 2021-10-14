@@ -1,13 +1,16 @@
----
-title: spring-cloud  
-tags:
-    - spring
-    - springcloud
----
-##  Spring Cloud 是一系列框架集合
+# Spring Cloud
+
+[https://spring.io/projects/spring-cloud](https://spring.io/projects/spring-cloud)
+
+
+
+## Spring Cloud 是一系列框架集合
+
 主要小弟：Spring Cloud Config、Spring Cloud Netflix（Eureka、Hystrix、Zuul、Archaius…）、Spring Cloud Bus、Spring Cloud for Cloud Foundry、Spring Cloud Cluster、Spring Cloud Consul、Spring Cloud Security、Spring Cloud Sleuth、Spring Cloud Data Flow、Spring Cloud Stream、Spring Cloud Task、Spring Cloud Zookeeper、Spring Cloud Connectors、Spring Cloud Starters、Spring Cloud CLI。
 ## 核心成员
+
 ### Spring Cloud Netflix
+
 与各种Netflix OSS组件集成，组成微服务的核心，他的小弟有Eureka, Hystrix, Zuul, Archaius… 
 - Netflix Eureka
 服务中心，云端服务发现，一个基于 REST 的服务，用于定位服务，以实现云端中间层服务发现和故障转移

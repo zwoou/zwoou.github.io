@@ -94,5 +94,15 @@ mainReactor负责监听连接，accept连接给subReactor处理，为什么要�
 ## 两种IO模式：Proactor与Reactor模式
 在高性能的I/O设计中，有两个比较著名的模式Reactor和Proactor模式，其中Reactor模式用于同步I/O，而Proactor运用于异步I/O操作。
 
+
+
+## 多路复用IO模型
+
+## 信号驱动IO模型
+
+## 异步IO模型
+
+
+
 参考
 [https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Java%20IO.md#%E4%B8%83nio](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Java%20IO.md#%E4%B8%83nio)
