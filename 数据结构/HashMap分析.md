@@ -1,12 +1,29 @@
 # HashMap
 
+[TOC]
 
 
-## 一. 继承和实现
+
+## 继承和实现
 
 ```
 HashMap<K,V> extends AbstractMap<K,V>
     implements Map<K,V>, Cloneable, Serializable
+    
+```
+
+## 默认构造方法
+
+  一个空的hashmap和默认16容量 负载因子0.75
+
+```java
+/**
+ * Constructs an empty {@code HashMap} with the default initial capacity
+ * (16) and the default load factor (0.75).
+ */
+public HashMap() {
+    this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
+}
 ```
 
 ## 二. 重要常量
@@ -95,6 +112,36 @@ static class Node<K,V> implements Map.Entry<K,V> {
 ```
 
 ## 四. hash的实现
+
+String的hashcode实现  
+
+```java
+/**
+ * Returns a hash code for this string. The hash code for a
+ * {@code String} object is computed as
+ * <blockquote><pre>
+ * s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+ * </pre></blockquote>
+ * using {@code int} arithmetic, where {@code s[i]} is the
+ * <i>i</i>th character of the string, {@code n} is the length of
+ * the string, and {@code ^} indicates exponentiation.
+ * (The hash value of the empty string is zero.)
+ *
+ * @return  a hash code value for this object.
+ */
+public int hashCode() {
+    int h = hash;
+    if (h == 0 && value.length > 0) {
+        hash = h = isLatin1() ? StringLatin1.hashCode(value)
+                              : StringUTF16.hashCode(value);
+    }
+    return h;
+}
+```
+
+
+
+
 
 ```
 // hash实现，没有直接使用key的hashcode()，而是使key的hashcode()高16位不变，低16位与高16位异或作为最终hash值。

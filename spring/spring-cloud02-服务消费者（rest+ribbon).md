@@ -9,15 +9,15 @@ ribbon是一个负载均衡客户端，可以很好的控制htt和tcp的一些�
 ribbon 已经默认实现了这些配置bean：主要实现通过LoadBalancerClient
 
     - IClientConfig ribbonClientConfig: DefaultClientConfigImpl
-
+    
     - IRule ribbonRule: ZoneAvoidanceRule
-
+    
     - IPing ribbonPing: NoOpPing
-
+    
     - ServerList ribbonServerList: ConfigurationBasedServerList
-
+    
     - ServerListFilter ribbonServerListFilter: ZonePreferenceServerListFilter
-
+    
     - ILoadBalancer ribbonLoadBalancer: ZoneAwareLoadBalancer
 ## 建一个服务消费者
 1. 重新新建一个spring-boot工程，取名为：service-ribbon;
