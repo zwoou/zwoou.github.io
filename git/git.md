@@ -42,6 +42,12 @@ git config core.autocrlf false
 git reset 会擦出
 git reset --hard commit_id
 
+12.  分支改名
+
+    ```shell
+    git branch -M main
+    ```
+
 git rm -r --cached applog\ \/\ 2018-03-29
 ## clone 从指定分支
 ```

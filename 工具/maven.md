@@ -30,7 +30,7 @@ idea上使用maven
         <mirrorOf>central</mirrorOf>
         <name>Nexus aliyun</name>
         <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-	</mirror>
+    </mirror>
 ## 添加资源文件 ##
     <profile>  
     <id>downloadSources</id>  
@@ -38,10 +38,10 @@ idea上使用maven
         <downloadSources>true</downloadSources>  
         <downloadJavadocs>true</downloadJavadocs>
     </properties>  
-	</profile>
+    </profile>
     <activeProfiles>  
-	<activeProfile>downloadSources</activeProfile>  
-	</activeProfiles> 
+    <activeProfile>downloadSources</activeProfile>  
+    </activeProfiles> 
 
 ## 安装jar
 
@@ -62,4 +62,14 @@ mvn install:install-file -DgroupId=com.qrcode -DartifactId=qrcode -Dversion=1.0.
 ```
 
  ## 跳过测试
-在<project>标签下的<properties>标签中加入<skipTests>true</skipTests>  
+在<project>标签下的<properties>标签中加入<skipTests>true</skipTests> 
+
+## 依赖范围scope 
+
+- **compile**: 默认范围，用于编译
+- **provided**: 类似于编译，但支持你期待jdk或者容器提供，类似于classpath    
+- **runtime**: 在执行时需要使用      
+- **test**:    用于test任务时使用      
+- **system**: 需要外在提供相应的元素。通过systemPath来取得      
+- **systemPath**: 仅用于范围为system。提供相应的路径      
+- **optional**:   当项目自身被依赖时，标注依赖是否传递。用于连续依赖时使用

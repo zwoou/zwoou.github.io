@@ -1,11 +1,3 @@
----
-title: nginx
-date: 2019-04-06
-tags:
-    - nginx
-    - server
----
-
 # nginx
 
 ## 下载
@@ -17,6 +9,21 @@ tags:
 ```shell
 sudo apt update
 sudo apt install nginx
+```
+
+或者
+
+```bash
+# 安装依赖
+yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
+# 解压缩
+tar -zxvf linux-nginx-1.12.2.tar.gz
+cd nginx-1.12.2/
+# 执行配置
+./configure
+# 编译安装(默认安装在/usr/local/nginx)
+make
+make install
 ```
 
 ## 常用命令
@@ -76,7 +83,7 @@ upstream favresin{
 ```
 
     -  fair（第三方）
-
+    
     按后端服务器的响应时间来分配请求，响应时间短的优先分配。与weight分配策略类似。
 
 ```
@@ -166,7 +173,7 @@ ngx_http_proxy_module 模块中的 proxy_connect_timeout 指令、proxy_read_tim
 proxy_connect_timeout   这个参数， 这个参数是连接的超时时间。 我设置成1，表示是1秒后超时会连接到另外一台服务器。
 
 3. nginx_upstream_check_module 模块
- 
+
 淘宝技术团队开发的模块,在官网[http://tengine.taobao.org/](http://tengine.taobao.org/)
 
 为nginx打补丁
