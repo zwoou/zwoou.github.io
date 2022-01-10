@@ -4,14 +4,6 @@
 
 
 
-## var、let、const区别
-
-- var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。
-
-- let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。
-
-- const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改。
-
 
 
 ## 官网
@@ -42,7 +34,7 @@ npm start
 
 生命周期可能会经历三个过程：
 
-- 装载过程（Mount）
+- 挂载过程（Mount）
 
 - 更新过程（Update）
 
@@ -50,16 +42,39 @@ npm start
 
   
 
-### 装载过程
+### 挂载过程
 
-- constructor
-- getInitialState
-- getDefaultProps
-- componentWillMount
-- render
-- componentDidMount
+当组件实例被创建并插入DOM中时，其生命周期调用顺序如下：
+
+- **constructor()**
+- static getDerivedStateFromProps()
+- ~~componentWillMount~~  过时
+- **render()**
+- **componentDidMount()**
+
+## 更新
+
+当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：
+
+- static getDerivedStateFromProps()
+- shouldComponentUpdate()
+- **render()**
+- getSnapshotBeforeUpdate()
+- **componentDidUpdate()**
+
+## 卸载
+
+当组件从 DOM 中移除时会调用如下方法：
+
+- **componentWillUnmount()**
+
+
 
 ## React Router
 
 [https://reactrouter.com/](https://reactrouter.com/)
+
+### Path匹配
+
+
 

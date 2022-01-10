@@ -7,11 +7,36 @@ docker run ubuntu:15.10 /bin/echo "Hello world"
 
 ```
 
-1. ## 运行交互式的容器
+- `-d, --detach=false`， 指定容器运行于前台还是后台，默认为false
 
-   ```
-   docker run -i -t ubuntu:15.10 /bin/bash
-   ```
+- `-t, --tty=false`， 分配tty设备，该可以支持终端登录，默认为false
+
+- `-P, --publish-all=false`， 指定容器暴露的端口
+
+- `-p, --publish=[]`， 指定容器暴露的端口
+
+- `-v, --volume=[]`， 给容器挂载存储卷，挂载到容器的某个目录
+
+- `--volumes-from=[]`， 给容器挂载其他容器上的卷，挂载到容器的某个目录
+
+- `--expose=[]`， 指定容器暴露的端口，即修改镜像的暴露端口
+
+- `--name=""`， 指定容器名字，后续可以通过名字进行容器管理，links特性需要使用名字
+
+- `--link=[]`， 指定容器间的关联，使用其他容器的IP、env等信息
+
+- ```--net="bridge" ``` 容器网络设置:
+  
+  - bridge 使用docker daemon指定的网桥
+  - host //容器使用主机的网络
+  - container:NAME_or_ID >//使用其他容器的网路，共享IP和PORT等网络资源
+  - none 容器使用自己的网络（类似--net=bridge），但是不进行配置
+
+## 运行交互式的容器
+
+```
+docker run -i -t ubuntu:15.10 /bin/bash
+```
 
 1. ## 启动容器（后台模式）
 
@@ -314,7 +339,7 @@ training/webapp     latest              6fae60ef3446        12 months ago       
 
    
 
-2. 删除
+2. 删除容器
 
    ```
    docker rm 65e94723f0ed

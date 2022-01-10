@@ -66,6 +66,14 @@ var newObject = JQuery.extend(true,{},oldObject);
 
 
 
+## var、let、const区别
+
+- var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。有提升机制（hoisting）
+
+- let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。
+
+- const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改。
+
 
 
 

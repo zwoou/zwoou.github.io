@@ -45,3 +45,60 @@ yum [options] [command] [package ...]
   - **yum clean headers**: 清除缓存目录下的 headers
   - **yum clean oldheaders**: 清除缓存目录下旧的 headers
   - **yum clean, yum clean all (= yum clean packages; yum clean oldheaders)** :清除缓存目录下的软件包及旧的 headers
+  
+  ## 常用系统命令
+  
+  ### echo命令
+  
+  在终端输出字符串值或者变量
+  
+  ### date命令
+  
+  显示及设置系统的时间或日期 格式 date [选项] [+指定的格式]
+  
+  | 参数 | 作用         |
+  | ---- | ------------ |
+  | %t   | 跳格（Tab)   |
+  | %H   | 小时（0-24） |
+  | %I   | 小时（0-12） |
+  | %M   | 分钟         |
+  
+  ### reboot命令
+  
+  重启系统
+  
+  ### poweroff命令
+  
+  关闭系统
+  
+  ### wget命令
+  
+  -b 后台下载模式
+  
+  -P 下载到指定目录
+  
+  -t   最大尝试次数
+  
+  -c  断点续传
+  
+  -p 下载页面内所有资源
+  
+  -r 递归下载
+  
+  ### ps命令
+  
+  查看系统中的进程状态
+  
+  | 参数 | 作用                   |
+  | ---- | ---------------------- |
+  | -a   | 显示所有的进程         |
+  | -u   | 用户以及其他详细信息   |
+  | -x   | 显示没有控制终端的进程 |
+  
+  ## top命令
+  
+  ## kill命令
+  
+  ## 系统状态检测命令
+  
+  
