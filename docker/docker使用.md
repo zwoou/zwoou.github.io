@@ -355,3 +355,21 @@ training/webapp     latest              6fae60ef3446        12 months ago       
 
    
 
+## 进入容器内部
+
+
+```shell
+docker exec -it [容器id]  /bin/bash
+```
+
+## 查看容器
+
+inspect 、top、stats
+
+1. 查看容器详情
+
+   ```
+   docker inspect [容器id]
+   ```
+
+   
