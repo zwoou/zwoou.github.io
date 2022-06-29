@@ -1,6 +1,10 @@
 # docker
 
 - [docker安装mysql8](/docker/docker安装mysql8.md)
+- [docker安装consul](/docker/docker安装consul.md)
+- [docker安装redis](/docker/docker安装redis.md)
+- [docker使用](/docker/docker使用.md)
+- [docker使用2](/docker/docker使用2.md)
 
 # js
 
@@ -48,3 +52,5 @@
 # 工具
 
 - [vmware](/工具/vmware使用.md)
+
+
