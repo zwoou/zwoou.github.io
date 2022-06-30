@@ -101,4 +101,7 @@ yum [options] [command] [package ...]
   
   ## 系统状态检测命令
   
+  ## history 显示历史命令
+  
+  !+数字 执行历史命令
   

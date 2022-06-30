@@ -53,4 +53,7 @@
 
 - [vmware](/工具/vmware使用.md)
 
+# Linux
 
+- [linux基本命令](linux/linux基本命令.md)
+- [linux](linux/linux.md)
