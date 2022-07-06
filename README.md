@@ -52,6 +52,8 @@
 # 工具
 
 - [vmware](/工具/vmware使用.md)
+- [virtualBox](/工具/virtualBox.md)
+- [vscode插件](工具/vscode使用.md)
 
 # Linux
 
